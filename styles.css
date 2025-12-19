@@ -1,0 +1,383 @@
+/* ============================================
+   TSA Brand Colors (from Brand ID Guide)
+   ============================================ */
+:root {
+    /* Primary Colors */
+    --tsa-red: #D22630;
+    --tsa-blue: #425563;
+    --tsa-blue-medium: #536876;
+    --tsa-blue-dark: #2C4050;
+
+    /* Secondary Colors */
+    --light-blue: #B6C9D3;
+    --teal: #58B2B7;
+    --orange: #F47B26;
+    --light-grey: #A5A5A5;
+
+    /* Neutral Colors */
+    --white: #FFFFFF;
+    --off-white: #F9FAFB;
+    --text-dark: #2C4050;
+}
+
+/* ============================================
+   Global Styles
+   ============================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    color: var(--tsa-blue);
+    background-color: var(--off-white);
+    line-height: 1.6;
+    overflow-x: hidden;
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ============================================
+   Container & Utility Classes
+   ============================================ */
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .container {
+        padding: 0 2rem;
+    }
+}
+
+/* ============================================
+   Watermark Background
+   ============================================ */
+.watermark-container {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    z-index: 0;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.watermark {
+    width: 100%;
+    height: auto;
+    opacity: 0.08;
+    display: block;
+}
+
+/* ============================================
+   Header
+   ============================================ */
+.header {
+    background-color: var(--white);
+    position: relative;
+    z-index: 10;
+    border-bottom: 1px solid #E5E7EB;
+}
+
+.header .container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.logo-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo {
+    height: 50px;
+    width: auto;
+}
+
+.tagline {
+    font-size: 0.875rem;
+    font-weight: 300;
+    color: var(--tsa-blue);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+/* ============================================
+   Main Content
+   ============================================ */
+.main-content {
+    flex: 1;
+    position: relative;
+    z-index: 5;
+    padding: 3rem 0;
+}
+
+/* ============================================
+   Hero Section
+   ============================================ */
+.hero {
+    margin-bottom: 4rem;
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+.hero-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--tsa-blue-dark);
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    font-weight: 300;
+    color: var(--tsa-blue-medium);
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+/* ============================================
+   Contact Section
+   ============================================ */
+.contact-section {
+    margin-bottom: 4rem;
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--tsa-blue-dark);
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.offices-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Office Cards */
+.office-card {
+    background-color: var(--white);
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border-top: 4px solid var(--tsa-red);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.office-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+}
+
+.office-name {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--tsa-red);
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid #E5E7EB;
+}
+
+.office-details {
+    color: var(--tsa-blue);
+}
+
+.office-details p {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+.office-details p:last-child {
+    margin-bottom: 0;
+}
+
+.office-details .phone {
+    font-weight: 600;
+    color: var(--tsa-blue-dark);
+    margin-top: 1rem;
+}
+
+.office-details .phone:first-of-type {
+    margin-top: 1rem;
+}
+
+.office-details .fax {
+    font-size: 0.875rem;
+    color: var(--tsa-blue-medium);
+    font-weight: 400;
+}
+
+/* ============================================
+   Footer
+   ============================================ */
+.footer {
+    background-color: var(--tsa-red);
+    color: var(--white);
+    padding: 2rem 0;
+    margin-top: auto;
+    position: relative;
+    z-index: 10;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+}
+
+.footer-locations {
+    font-size: 0.875rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.footer-copyright {
+    font-size: 0.75rem;
+    font-weight: 300;
+    opacity: 0.9;
+}
+
+/* ============================================
+   Responsive Breakpoints
+   ============================================ */
+
+/* Tablet: 768px and up */
+@media (min-width: 768px) {
+    .logo {
+        height: 60px;
+    }
+
+    .tagline {
+        font-size: 1rem;
+    }
+
+    .hero-title {
+        font-size: 3.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.375rem;
+    }
+
+    .offices-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .watermark-container {
+        max-width: 1000px;
+    }
+}
+
+/* Desktop: 1024px and up */
+@media (min-width: 1024px) {
+    .logo {
+        height: 70px;
+    }
+
+    .hero {
+        padding: 4rem 1rem;
+    }
+
+    .hero-title {
+        font-size: 4rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.5rem;
+    }
+
+    .offices-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .office-card {
+        padding: 2.5rem;
+    }
+
+    .watermark-container {
+        max-width: 1200px;
+    }
+}
+
+/* Large Desktop: 1440px and up */
+@media (min-width: 1440px) {
+    .watermark-container {
+        max-width: 1400px;
+    }
+}
+
+/* ============================================
+   Mobile Adjustments
+   ============================================ */
+@media (max-width: 767px) {
+    .logo-wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .hero {
+        padding: 2rem 1rem;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.125rem;
+    }
+
+    .section-title {
+        font-size: 1.75rem;
+    }
+
+    .office-card {
+        padding: 1.5rem;
+    }
+
+    .watermark {
+        opacity: 0.05;
+    }
+}
+
+/* ============================================
+   Print Styles
+   ============================================ */
+@media print {
+    .watermark-container {
+        display: none;
+    }
+
+    .office-card {
+        break-inside: avoid;
+        box-shadow: none;
+        border: 1px solid #E5E7EB;
+    }
+
+    .footer {
+        background-color: var(--tsa-blue-dark);
+    }
+}
