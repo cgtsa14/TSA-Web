@@ -4,3 +4,5 @@ static_sites:
   github:
     branch: main
     deploy_on_push: true
+    repo: cgtsa14/TSA-Web
+  name: tsa-web
