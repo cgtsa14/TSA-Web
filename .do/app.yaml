@@ -1,8 +1,0 @@
-name: tsa-web
-static_sites:
-- environment_slug: html
-  github:
-    branch: main
-    deploy_on_push: true
-    repo: cgtsa14/TSA-Web
-  name: tsa-web
