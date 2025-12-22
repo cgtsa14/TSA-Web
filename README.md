@@ -23,11 +23,10 @@ Static marketing site for Technical & Scientific Application, Inc. (TSA). Built 
 ├── styles.css                 # Global site styles
 ├── assets/                    # Images, logos, icons
 │   ├── tsa_pri_pos_rgb.svg     # Primary TSA logo
-│   ├── solution-card-1.png
-│   ├── solution-card-3.png
-│   ├── data-center.png
-│   ├── it-worker.jpg
-│   ├── building-relationships.png
+│   ├── solution-card-1.webp
+│   ├── solution-card-3.webp
+│   ├── data-center.webp
+│   ├── building-relationships.webp
 │   ├── Web_Arrow.svg
 │   └── Icon/                   # Icon assets
 │       ├── Arrow-Right.png
