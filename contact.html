@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact TSA - Technical & Scientific Application, Inc. Reach out to our Houston, Birmingham, or Atlanta offices.">
+    <title>Contact Us - TSA</title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <nav class="nav">
+        <div class="container">
+            <div class="nav-content">
+                <div class="nav-logo">
+                    <img src="assets/tsa_pri_pos_rgb.svg" alt="TSA - Technical & Scientific Application, Inc." class="logo">
+                    <span class="nav-company-name">Technical & Scientific Application, Inc.</span>
+                </div>
+                <div class="nav-links">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="contact.html" class="nav-link active">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Title -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Contact Us</h1>
+            <p class="page-subtitle">Get in touch with our team at any of our office locations</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Office Locations Grid -->
+            <section class="contact-section">
+                <div class="offices-grid">
+                    <!-- Houston Office -->
+                    <div class="office-card">
+                        <h3 class="office-name">TSA – Houston</h3>
+                        <div class="office-details">
+                            <p>PO Box 19133</p>
+                            <p>Houston, Texas 77224</p>
+                            <p class="phone">(713) 935-1500</p>
+                        </div>
+                    </div>
+
+                    <!-- Birmingham Office -->
+                    <div class="office-card">
+                        <h3 class="office-name">TSA – Birmingham</h3>
+                        <div class="office-details">
+                            <p>1855 Data Drive, Suite 100</p>
+                            <p>Hoover, AL 35244</p>
+                            <p class="phone">(205) 421-4900</p>
+                            <p class="fax">Fax: (205) 402-2385</p>
+                        </div>
+                    </div>
+
+                    <!-- Atlanta Office -->
+                    <div class="office-card">
+                        <h3 class="office-name">TSA – Atlanta</h3>
+                        <div class="office-details">
+                            <p>1283 Kennestone Circle, Suite 100</p>
+                            <p>Marietta, GA 30066</p>
+                            <p class="phone">(844) 978-7000</p>
+                            <p class="phone">(404) 978-7000</p>
+                            <p class="fax">Fax: (404) 978-7055</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-new">
+        <div class="container">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <img src="assets/tsa_pri_pos_rgb.svg" alt="TSA" class="footer-logo">
+                    <p class="footer-company-name">Technical & Scientific Application, Inc</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4 class="footer-heading">Navigation</h4>
+                        <a href="index.html" class="footer-link">Home</a>
+                        <a href="contact.html" class="footer-link">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-divider"></div>
+            <div class="footer-bottom">
+                <p class="footer-copyright">&copy;<span id="current-year"></span> TSA, Inc. • All Rights Reserved</p>
+                <a href="#" class="footer-terms">Terms & Conditions</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const yearEl = document.getElementById('current-year');
+        if (yearEl) {
+            yearEl.textContent = new Date().getFullYear();
+        }
+
+        const alignFooterNav = () => {
+            const contactButton = document.querySelector('.nav-links .btn-outline');
+            const footerLinks = document.querySelector('.footer-links');
+            if (!contactButton || !footerLinks) {
+                return;
+            }
+
+            footerLinks.style.transform = 'translateX(0)';
+            const buttonLeft = contactButton.getBoundingClientRect().left;
+            const footerLeft = footerLinks.getBoundingClientRect().left;
+            const offset = Math.round(buttonLeft - footerLeft);
+            footerLinks.style.transform = `translateX(${offset}px)`;
+        };
+
+        window.addEventListener('load', alignFooterNav);
+        window.addEventListener('resize', alignFooterNav);
+    </script>
+</body>
+</html>
