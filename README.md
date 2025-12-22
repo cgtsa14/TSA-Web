@@ -71,7 +71,7 @@ No build step or server required.
 - ✅ Brand-compliant design per TSA Brand ID Standards Guide
 - ✅ Fully responsive (mobile, tablet, desktop)
 - ✅ Contact information for all three offices (Houston, Birmingham, Atlanta)
-- ✅ Utilizing Cookiebot for Cookies
+- ✅ Utilizing Cookiebot for Cookie Management
 - ✅ Fast loading with optimized assets
 
 ## Browser Support
